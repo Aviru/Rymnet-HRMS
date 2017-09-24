@@ -1,9 +1,9 @@
 //
 //  CustomActivityIndicatorView.swift
-//  kurs
 //
-//  Created by Sergey Yuryev on 22/01/15.
-//  Copyright (c) 2015 syuryev. All rights reserved.
+//
+//  Created by Aviru Bhattacharjee on 24/09/17.
+//  Copyright (c) 2017 Aviru Bhattacharjee. All rights reserved.
 //
 
 import UIKit
@@ -81,6 +81,8 @@ class CustomActivityIndicatorView: UIView {
 
     func startAnimating () {
         
+        UIApplication.shared.beginIgnoringInteractionEvents()
+        
         if isAnimating {
             return
         }
@@ -92,6 +94,9 @@ class CustomActivityIndicatorView: UIView {
     }
 
     func stopAnimating () {
+        
+        UIApplication.shared.endIgnoringInteractionEvents()
+        
         if hidesWhenStopped {
             self.isHidden = true
         }
