@@ -11,6 +11,7 @@
 		000C18201F76CA3D00D92333 /* ViewShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000C181F1F76CA3D00D92333 /* ViewShadow.swift */; };
 		000C18221F76F1D600D92333 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000C18211F76F1D600D92333 /* RoundedButton.swift */; };
 		000C18271F76FD8200D92333 /* CustomActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000C18261F76FD8200D92333 /* CustomActivityIndicatorView.swift */; };
+		001661E31F79961B00030BC8 /* LoginWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001661E21F79961B00030BC8 /* LoginWebService.swift */; };
 		002826C61F7300440054C87E /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002826C51F7300440054C87E /* LoginVC.swift */; };
 		002826C81F7300850054C87E /* BaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002826C71F7300850054C87E /* BaseVC.swift */; };
 		002826CA1F7300EE0054C87E /* UpperCornersRoundedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002826C91F7300EE0054C87E /* UpperCornersRoundedImageView.swift */; };
@@ -18,8 +19,8 @@
 		0093C2001F72C572000054F4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0093C1FE1F72C572000054F4 /* Main.storyboard */; };
 		0093C2021F72C572000054F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0093C2011F72C572000054F4 /* Assets.xcassets */; };
 		0093C2051F72C572000054F4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0093C2031F72C572000054F4 /* LaunchScreen.storyboard */; };
+		00946F511F79822A00401089 /* GlobalUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00946F501F79822A00401089 /* GlobalUserDefaults.swift */; };
 		00E6F7AD1F77834C0007E7EE /* WebServiceBaseClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E6F7AC1F77834C0007E7EE /* WebServiceBaseClass.swift */; };
-		00E6F7B01F7783740007E7EE /* LoginWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E6F7AF1F7783740007E7EE /* LoginWebService.swift */; };
 		00E6F7B41F778C2C0007E7EE /* ModelLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E6F7B31F778C2C0007E7EE /* ModelLogin.swift */; };
 		26AAE6E4120F0961F86811A6 /* Pods_Rymnet_HRMS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B13FE504F543E2F81FEA767 /* Pods_Rymnet_HRMS.framework */; };
 /* End PBXBuildFile section */
@@ -29,6 +30,7 @@
 		000C181F1F76CA3D00D92333 /* ViewShadow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewShadow.swift; sourceTree = "<group>"; };
 		000C18211F76F1D600D92333 /* RoundedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		000C18261F76FD8200D92333 /* CustomActivityIndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomActivityIndicatorView.swift; sourceTree = "<group>"; };
+		001661E21F79961B00030BC8 /* LoginWebService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginWebService.swift; sourceTree = "<group>"; };
 		002826C51F7300440054C87E /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		002826C71F7300850054C87E /* BaseVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseVC.swift; sourceTree = "<group>"; };
 		002826C91F7300EE0054C87E /* UpperCornersRoundedImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpperCornersRoundedImageView.swift; sourceTree = "<group>"; };
@@ -38,8 +40,8 @@
 		0093C2011F72C572000054F4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0093C2041F72C572000054F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0093C2061F72C572000054F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		00946F501F79822A00401089 /* GlobalUserDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalUserDefaults.swift; sourceTree = "<group>"; };
 		00E6F7AC1F77834C0007E7EE /* WebServiceBaseClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebServiceBaseClass.swift; sourceTree = "<group>"; };
-		00E6F7AF1F7783740007E7EE /* LoginWebService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginWebService.swift; sourceTree = "<group>"; };
 		00E6F7B31F778C2C0007E7EE /* ModelLogin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelLogin.swift; sourceTree = "<group>"; };
 		637845CD550DD46A1E93FA67 /* Pods-Rymnet HRMS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rymnet HRMS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Rymnet HRMS/Pods-Rymnet HRMS.debug.xcconfig"; sourceTree = "<group>"; };
 		6B13FE504F543E2F81FEA767 /* Pods_Rymnet_HRMS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Rymnet_HRMS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -61,6 +63,7 @@
 		000C18251F76FD7600D92333 /* Custom class */ = {
 			isa = PBXGroup;
 			children = (
+				00946F4F1F79822A00401089 /* Global UserDefault */,
 				000C18261F76FD8200D92333 /* CustomActivityIndicatorView.swift */,
 			);
 			path = "Custom class";
@@ -146,6 +149,14 @@
 			path = "Rymnet HRMS";
 			sourceTree = "<group>";
 		};
+		00946F4F1F79822A00401089 /* Global UserDefault */ = {
+			isa = PBXGroup;
+			children = (
+				00946F501F79822A00401089 /* GlobalUserDefaults.swift */,
+			);
+			path = "Global UserDefault";
+			sourceTree = "<group>";
+		};
 		00E6F7AB1F7783300007E7EE /* WebService BaseClass */ = {
 			isa = PBXGroup;
 			children = (
@@ -157,7 +168,7 @@
 		00E6F7AE1F7783740007E7EE /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				00E6F7AF1F7783740007E7EE /* LoginWebService.swift */,
+				001661E21F79961B00030BC8 /* LoginWebService.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -323,13 +334,14 @@
 				002826CA1F7300EE0054C87E /* UpperCornersRoundedImageView.swift in Sources */,
 				000C18201F76CA3D00D92333 /* ViewShadow.swift in Sources */,
 				00E6F7AD1F77834C0007E7EE /* WebServiceBaseClass.swift in Sources */,
+				001661E31F79961B00030BC8 /* LoginWebService.swift in Sources */,
 				002826C61F7300440054C87E /* LoginVC.swift in Sources */,
 				00E6F7B41F778C2C0007E7EE /* ModelLogin.swift in Sources */,
 				000C18271F76FD8200D92333 /* CustomActivityIndicatorView.swift in Sources */,
 				000C18221F76F1D600D92333 /* RoundedButton.swift in Sources */,
 				002826C81F7300850054C87E /* BaseVC.swift in Sources */,
-				00E6F7B01F7783740007E7EE /* LoginWebService.swift in Sources */,
 				0093C1FB1F72C572000054F4 /* AppDelegate.swift in Sources */,
+				00946F511F79822A00401089 /* GlobalUserDefaults.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

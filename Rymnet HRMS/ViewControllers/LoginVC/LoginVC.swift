@@ -22,7 +22,10 @@ class LoginVC: BaseVC,UITextFieldDelegate {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        
+        strEmail = "rDemo@rymnet.com"
+        strPassword = "Rym@1234"
+        txtEmail.text = strEmail
+        txtPassword.text = strPassword
     }
     
     // MARK: - Textfield Delegates
@@ -75,7 +78,22 @@ class LoginVC: BaseVC,UITextFieldDelegate {
             
             activityIndicator.startAnimating()
             
+            let loginDict : [String:String] = ["app_id" : "android-app", "secret_key" : "BCE68DD9-B0C3-4FA8-89D3-9E76887A711B", "device_token" : "Testingfff" , "id" : strEmail, "password" : strPassword]
             
+            
+            LoginWebService.Service.callLoginWebService(dictParams: loginDict, { (isError, Message) in
+                
+                self.activityIndicator.stopAnimating()
+                
+                if isError {
+                    
+                    self.showAlertMessage(titl: "Error", msg: Message!, displayTwoButtons: false)
+                }
+                else {
+                    
+                    print("Success")
+                }
+            })
         }
     }
     

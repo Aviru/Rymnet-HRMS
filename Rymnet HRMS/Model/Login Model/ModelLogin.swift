@@ -8,39 +8,52 @@
 
 import UIKit
 
-class ModelLogin: NSObject {
+class ModelLogin: NSObject,NSCoding {
     
-    var strSenderId: String?
-    var strReceiverId: String?
-    var strRequestStatus: String?
+    var strAuthToken: String?
+    var strRedirectUrl: String?
+       
+    // MARK: NSCoding
+    
+    init(authToken : String, redirectUrl: String) {
+        self.strAuthToken = authToken
+        self.strRedirectUrl = redirectUrl
+      
+    }
+    
+    required convenience init?(coder decoder: NSCoder) {
+        guard let authToken = decoder.decodeObject(forKey: "authtoken") as? String,let redirectUrl = decoder.decodeObject(forKey: "redirectURL") as? String
+            else {
+                return nil
+        }
+        
+        self.init(authToken : authToken, redirectUrl: redirectUrl)
+    }
+    
+    
+    func encode(with aCoder: NSCoder)  {
+        aCoder.encode(self.strAuthToken, forKey: "authtoken")
+        aCoder.encode(self.strRedirectUrl, forKey: "redirectURL")
+           }
     
     init(infoDic: NSDictionary) {
         
-        if let senderid = infoDic["senderId"] as? String
+        if let Token = infoDic["authtoken"] as? String
         {
-            self.strSenderId = senderid
+            self.strAuthToken = Token
         }
         else
         {
-            self.strSenderId = ""
+            self.strAuthToken = ""
         }
         
-        if let receiverid = infoDic["receiverId"] as? String
+        if let Url = infoDic["redirectURL"] as? String
         {
-            self.strReceiverId = receiverid
+            self.strRedirectUrl = Url
         }
         else
         {
-            self.strReceiverId = ""
-        }
-        
-        if let status = infoDic["status"]as? String
-        {
-            self.strRequestStatus = status
-        }
-        else
-        {
-            self.strRequestStatus = ""
+            self.strRedirectUrl = ""
         }
         
     }
