@@ -10,7 +10,7 @@ import UIKit
 
 @objc class GlobalUserDefaults: NSObject {
     
-  @objc class func getObjectWithKey(_ key: String) -> AnyObject {
+  @objc class func getObjectWithKey(_ key: String) -> AnyObject? {
         
         let defaults : UserDefaults = getDefaults()
         var obj : AnyObject? = defaults.object(forKey: key) as AnyObject

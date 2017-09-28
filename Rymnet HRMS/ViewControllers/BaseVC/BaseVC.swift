@@ -7,6 +7,7 @@
 //
 
 import UIKit
+ let appDel = UIApplication.shared.delegate as! AppDelegate
 
 // MARK: - Extension
 
@@ -17,6 +18,8 @@ extension String
         return self.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
     }
 }
+
+
 
 class BaseVC: UIViewController {
     

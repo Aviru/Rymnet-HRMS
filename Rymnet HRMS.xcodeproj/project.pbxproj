@@ -12,6 +12,7 @@
 		000C18221F76F1D600D92333 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000C18211F76F1D600D92333 /* RoundedButton.swift */; };
 		000C18271F76FD8200D92333 /* CustomActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000C18261F76FD8200D92333 /* CustomActivityIndicatorView.swift */; };
 		001661E31F79961B00030BC8 /* LoginWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001661E21F79961B00030BC8 /* LoginWebService.swift */; };
+		00252B451F7D447C00BC8560 /* HRMSViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00252B441F7D447C00BC8560 /* HRMSViewVC.swift */; };
 		002826C61F7300440054C87E /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002826C51F7300440054C87E /* LoginVC.swift */; };
 		002826C81F7300850054C87E /* BaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002826C71F7300850054C87E /* BaseVC.swift */; };
 		002826CA1F7300EE0054C87E /* UpperCornersRoundedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002826C91F7300EE0054C87E /* UpperCornersRoundedImageView.swift */; };
@@ -31,6 +32,8 @@
 		000C18211F76F1D600D92333 /* RoundedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		000C18261F76FD8200D92333 /* CustomActivityIndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomActivityIndicatorView.swift; sourceTree = "<group>"; };
 		001661E21F79961B00030BC8 /* LoginWebService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginWebService.swift; sourceTree = "<group>"; };
+		00252B441F7D447C00BC8560 /* HRMSViewVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HRMSViewVC.swift; sourceTree = "<group>"; };
+		00252B461F7D7D0900BC8560 /* Rymnet HRMS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Rymnet HRMS.entitlements"; sourceTree = "<group>"; };
 		002826C51F7300440054C87E /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		002826C71F7300850054C87E /* BaseVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseVC.swift; sourceTree = "<group>"; };
 		002826C91F7300EE0054C87E /* UpperCornersRoundedImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpperCornersRoundedImageView.swift; sourceTree = "<group>"; };
@@ -78,11 +81,21 @@
 			path = WebService;
 			sourceTree = "<group>";
 		};
+		00252B431F7D43E300BC8560 /* HRMS View */ = {
+			isa = PBXGroup;
+			children = (
+				00252B441F7D447C00BC8560 /* HRMSViewVC.swift */,
+			);
+			name = "HRMS View";
+			path = "../WebService/HRMS View";
+			sourceTree = "<group>";
+		};
 		002826BF1F72FFE00054C87E /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				002826C31F73003A0054C87E /* BaseVC */,
 				002826C41F7300440054C87E /* LoginVC */,
+				002826C31F73003A0054C87E /* BaseVC */,
+				00252B431F7D43E300BC8560 /* HRMS View */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -135,6 +148,7 @@
 		0093C1F91F72C572000054F4 /* Rymnet HRMS */ = {
 			isa = PBXGroup;
 			children = (
+				00252B461F7D7D0900BC8560 /* Rymnet HRMS.entitlements */,
 				0093C1FA1F72C572000054F4 /* AppDelegate.swift */,
 				000C18251F76FD7600D92333 /* Custom class */,
 				002826C21F72FFFF0054C87E /* IB Designables */,
@@ -243,6 +257,14 @@
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = TVX637QK9Z;
 						ProvisioningStyle = Manual;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -330,6 +352,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00252B451F7D447C00BC8560 /* HRMSViewVC.swift in Sources */,
 				000C181E1F76C4FD00D92333 /* BottomCornersRoundedImageView.swift in Sources */,
 				002826CA1F7300EE0054C87E /* UpperCornersRoundedImageView.swift in Sources */,
 				000C18201F76CA3D00D92333 /* ViewShadow.swift in Sources */,
@@ -471,6 +494,7 @@
 			baseConfigurationReference = 637845CD550DD46A1E93FA67 /* Pods-Rymnet HRMS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Rymnet HRMS/Rymnet HRMS.entitlements";
 				DEVELOPMENT_TEAM = TVX637QK9Z;
 				INFOPLIST_FILE = "Rymnet HRMS/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -488,6 +512,7 @@
 			baseConfigurationReference = C883D80B646417012D609B48 /* Pods-Rymnet HRMS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Rymnet HRMS/Rymnet HRMS.entitlements";
 				DEVELOPMENT_TEAM = TVX637QK9Z;
 				INFOPLIST_FILE = "Rymnet HRMS/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
