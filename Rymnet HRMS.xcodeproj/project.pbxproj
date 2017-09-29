@@ -66,8 +66,8 @@
 		000C18251F76FD7600D92333 /* Custom class */ = {
 			isa = PBXGroup;
 			children = (
-				00946F4F1F79822A00401089 /* Global UserDefault */,
 				000C18261F76FD8200D92333 /* CustomActivityIndicatorView.swift */,
+				00946F4F1F79822A00401089 /* Global UserDefault */,
 			);
 			path = "Custom class";
 			sourceTree = "<group>";
@@ -93,8 +93,8 @@
 		002826BF1F72FFE00054C87E /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				002826C41F7300440054C87E /* LoginVC */,
 				002826C31F73003A0054C87E /* BaseVC */,
+				002826C41F7300440054C87E /* LoginVC */,
 				00252B431F7D43E300BC8560 /* HRMS View */,
 			);
 			path = ViewControllers;
@@ -262,7 +262,7 @@
 								enabled = 1;
 							};
 							com.apple.Push = {
-								enabled = 1;
+								enabled = 0;
 							};
 						};
 					};
@@ -494,7 +494,6 @@
 			baseConfigurationReference = 637845CD550DD46A1E93FA67 /* Pods-Rymnet HRMS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "Rymnet HRMS/Rymnet HRMS.entitlements";
 				DEVELOPMENT_TEAM = TVX637QK9Z;
 				INFOPLIST_FILE = "Rymnet HRMS/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -512,7 +511,6 @@
 			baseConfigurationReference = C883D80B646417012D609B48 /* Pods-Rymnet HRMS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "Rymnet HRMS/Rymnet HRMS.entitlements";
 				DEVELOPMENT_TEAM = TVX637QK9Z;
 				INFOPLIST_FILE = "Rymnet HRMS/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;

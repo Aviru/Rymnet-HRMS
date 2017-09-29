@@ -10,7 +10,7 @@ import UIKit
 
 class LoginVC: BaseVC,UITextFieldDelegate {
     
-    var strEmail = "",strPassword = ""
+    var strEmail = "",strPassword = "",strDeviceToken = ""
     var globalTxtField : UITextField!
     
     
@@ -78,7 +78,14 @@ class LoginVC: BaseVC,UITextFieldDelegate {
             
             activityIndicator.startAnimating()
             
-            let loginDict : [String:String] = ["app_id" : "android-app", "secret_key" : "BCE68DD9-B0C3-4FA8-89D3-9E76887A711B", "device_token" : "Testingfff" , "id" : strEmail, "password" : strPassword]
+            if (GlobalUserDefaults.getObjectWithKey("deviceToken") != nil) {
+                strDeviceToken = GlobalUserDefaults.getObjectWithKey("deviceToken") as! String
+            }
+            else {
+                strDeviceToken = "Testingfff"
+            }
+            
+            let loginDict : [String:String] = ["app_id" : "android-app", "secret_key" : "BCE68DD9-B0C3-4FA8-89D3-9E76887A711B", "device_token" : strDeviceToken , "id" : strEmail, "password" : strPassword]
             
             
             LoginWebService.Service.callLoginWebService(dictParams: loginDict, { (isError, Message) in
@@ -91,7 +98,8 @@ class LoginVC: BaseVC,UITextFieldDelegate {
                 }
                 else {
                     
-                    print("Success")
+                    //print("Success")
+                    self.performSegue(withIdentifier: "showHRMSVCSegue", sender: nil)
                 }
             })
         }

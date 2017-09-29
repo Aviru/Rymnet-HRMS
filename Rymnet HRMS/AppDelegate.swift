@@ -61,11 +61,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                                                object: nil)
         // [END add_token_refresh_observer]
         
-        if  GlobalUserDefaults.getObjectWithKey("loginInfo") == nil {
-            
-            
-        }
-        else {
+        if  GlobalUserDefaults.getObjectWithKey("loginInfo") != nil {
             
             let outData = GlobalUserDefaults.getObjectWithKey("loginInfo")
             loginInfoModelObj = NSKeyedUnarchiver.unarchiveObject(with: outData as! Data) as? ModelLogin
@@ -75,6 +71,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             self.window!.rootViewController = navigationController
             self.window?.makeKeyAndVisible()
         }
+       
         
         return true
     }
@@ -122,6 +119,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func tokenRefreshNotification(_ notification: Notification) {
         if let refreshedToken = InstanceID.instanceID().token() {
             print("InstanceID token: \(refreshedToken)")
+            if  GlobalUserDefaults.saveObject(obj: refreshedToken as AnyObject, key: "deviceToken") {
+                print("FCM token saved successfully")
+            }
+            else {
+                print("Error in saving FCM token")
+            }
         }
         
         // Connect to FCM since connection may have failed when attempted before having a token.
