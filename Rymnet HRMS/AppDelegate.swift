@@ -61,21 +61,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                                                object: nil)
         // [END add_token_refresh_observer]
         
-        if  GlobalUserDefaults.getObjectWithKey("loginInfo") != nil {
-            
-            let outData = GlobalUserDefaults.getObjectWithKey("loginInfo")
-            loginInfoModelObj = NSKeyedUnarchiver.unarchiveObject(with: outData as! Data) as? ModelLogin
-            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-            let hrmsVC = storyBoard.instantiateViewController(withIdentifier: "HRMSViewVC") as! HRMSViewVC
-            let navigationController = UINavigationController(rootViewController: hrmsVC)
-            self.window!.rootViewController = navigationController
-            self.window?.makeKeyAndVisible()
-        }
-       
+            if ((GlobalUserDefaults.getObjectWithKey("loginInfo") as? NSData) != nil)
+            {
+                print("Object is NOT nil")
+                
+                let outData = GlobalUserDefaults.getObjectWithKey("loginInfo")
+                loginInfoModelObj = NSKeyedUnarchiver.unarchiveObject(with: outData as! Data) as? ModelLogin
+                let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                let hrmsVC = storyBoard.instantiateViewController(withIdentifier: "HRMSViewVC") as! HRMSViewVC
+                let navigationController = UINavigationController(rootViewController: hrmsVC)
+                self.window!.rootViewController = navigationController
+                self.window?.makeKeyAndVisible()
+            }
+        
+        
         
         return true
     }
-    
     
     func messaging(_ messaging: Messaging, didRefreshRegistrationToken fcmToken: String) {
         print("Firebase registration token: \(fcmToken)")
@@ -111,6 +113,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Print full message.
         print(userInfo)
         
+        let state = UIApplication.shared.applicationState
+        
+        if state == .inactive || state == .background {
+        }
+        
+        else if state == .active {
+            
+        }
+        
         completionHandler(UIBackgroundFetchResult.newData)
     }
     // [END receive_message]
@@ -140,25 +151,31 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         
         // Disconnect previous FCM connection if it exists.
-        Messaging.messaging().shouldEstablishDirectChannel = false     //Messaging.messaging().disconnect()
+        Messaging.messaging().disconnect()
         
-        if Messaging.messaging().isDirectChannelEstablished {
-            
-            print("Connected to FCM.")
-        }
-        else {
-            
-            print("Unable to connect with FCM.")
-            
-        }
-        
-//        Messaging.messaging().connect { (error) in
-//            if error != nil {
-//                print("Unable to connect with FCM. \(error)")
-//            } else {
-//                print("Connected to FCM.")
-//            }
+//        // Disconnect previous FCM connection if it exists.
+//        Messaging.messaging().shouldEstablishDirectChannel = false     //Messaging.messaging().disconnect()
+//        
+//        
+//        Messaging.messaging().shouldEstablishDirectChannel = true
+//        
+//        if Messaging.messaging().isDirectChannelEstablished {
+//            
+//            print("Connected to FCM.")
 //        }
+//        else {
+//            
+//            print("Unable to connect with FCM.")
+//            
+//        }
+        
+        Messaging.messaging().connect { (error) in
+            if error != nil {
+                print("Unable to connect with FCM. \(String(describing: error))")
+            } else {
+                print("Connected to FCM.")
+            }
+        }
     }
     // [END connect_to_fcm]
     
@@ -184,8 +201,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     // [START disconnect_from_fcm]
     func applicationDidEnterBackground(_ application: UIApplication) {
-        //Messaging.messaging().disconnect()
-        Messaging.messaging().shouldEstablishDirectChannel = false
+        Messaging.messaging().disconnect()
+        //Messaging.messaging().shouldEstablishDirectChannel = false
         print("Disconnected from FCM.")
     }
     // [END disconnect_from_fcm]

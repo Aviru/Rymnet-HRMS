@@ -16,6 +16,7 @@
 		002826C61F7300440054C87E /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002826C51F7300440054C87E /* LoginVC.swift */; };
 		002826C81F7300850054C87E /* BaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002826C71F7300850054C87E /* BaseVC.swift */; };
 		002826CA1F7300EE0054C87E /* UpperCornersRoundedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002826C91F7300EE0054C87E /* UpperCornersRoundedImageView.swift */; };
+		007DC5111F89380F003BF5A5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 007DC5101F89380F003BF5A5 /* GoogleService-Info.plist */; };
 		0093C1FB1F72C572000054F4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0093C1FA1F72C572000054F4 /* AppDelegate.swift */; };
 		0093C2001F72C572000054F4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0093C1FE1F72C572000054F4 /* Main.storyboard */; };
 		0093C2021F72C572000054F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0093C2011F72C572000054F4 /* Assets.xcassets */; };
@@ -37,6 +38,7 @@
 		002826C51F7300440054C87E /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		002826C71F7300850054C87E /* BaseVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseVC.swift; sourceTree = "<group>"; };
 		002826C91F7300EE0054C87E /* UpperCornersRoundedImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpperCornersRoundedImageView.swift; sourceTree = "<group>"; };
+		007DC5101F89380F003BF5A5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0093C1F71F72C572000054F4 /* Rymnet HRMS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Rymnet HRMS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0093C1FA1F72C572000054F4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0093C1FF1F72C572000054F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -127,6 +129,14 @@
 			path = LoginVC;
 			sourceTree = "<group>";
 		};
+		007DC50F1F89380F003BF5A5 /* Google-info plist */ = {
+			isa = PBXGroup;
+			children = (
+				007DC5101F89380F003BF5A5 /* GoogleService-Info.plist */,
+			);
+			path = "Google-info plist";
+			sourceTree = "<group>";
+		};
 		0093C1EE1F72C572000054F4 = {
 			isa = PBXGroup;
 			children = (
@@ -149,6 +159,7 @@
 			isa = PBXGroup;
 			children = (
 				00252B461F7D7D0900BC8560 /* Rymnet HRMS.entitlements */,
+				007DC50F1F89380F003BF5A5 /* Google-info plist */,
 				0093C1FA1F72C572000054F4 /* AppDelegate.swift */,
 				000C18251F76FD7600D92333 /* Custom class */,
 				002826C21F72FFFF0054C87E /* IB Designables */,
@@ -255,14 +266,14 @@
 				TargetAttributes = {
 					0093C1F61F72C572000054F4 = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = TVX637QK9Z;
+						DevelopmentTeam = 5JR4F25XUY;
 						ProvisioningStyle = Manual;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
 							};
 							com.apple.Push = {
-								enabled = 0;
+								enabled = 1;
 							};
 						};
 					};
@@ -292,6 +303,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0093C2051F72C572000054F4 /* LaunchScreen.storyboard in Resources */,
+				007DC5111F89380F003BF5A5 /* GoogleService-Info.plist in Resources */,
 				0093C2021F72C572000054F4 /* Assets.xcassets in Resources */,
 				0093C2001F72C572000054F4 /* Main.storyboard in Resources */,
 			);
@@ -412,11 +424,11 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Aviru Bhattacharjee (L74V47PD4S)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Aviru Bhattacharjee (L74V47PD4S)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Choo U Tan (HK7P8G6PM4)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Choo U Tan (HK7P8G6PM4)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEVELOPMENT_TEAM = TVX637QK9Z;
+				DEVELOPMENT_TEAM = 5JR4F25XUY;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -436,7 +448,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE = "a40c1fd0-ceaf-4ec4-ae17-a72c54b1fe98";
+				PROVISIONING_PROFILE = "507d9170-e288-4b6e-8280-e0fdf281bcbd";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -465,11 +477,11 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Aviru Bhattacharjee (L74V47PD4S)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Aviru Bhattacharjee (L74V47PD4S)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Choo U Tan (HK7P8G6PM4)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Choo U Tan (HK7P8G6PM4)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = TVX637QK9Z;
+				DEVELOPMENT_TEAM = 5JR4F25XUY;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -482,7 +494,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PROVISIONING_PROFILE = "a40c1fd0-ceaf-4ec4-ae17-a72c54b1fe98";
+				PROVISIONING_PROFILE = "507d9170-e288-4b6e-8280-e0fdf281bcbd";
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
@@ -494,14 +506,16 @@
 			baseConfigurationReference = 637845CD550DD46A1E93FA67 /* Pods-Rymnet HRMS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = TVX637QK9Z;
+				CODE_SIGN_ENTITLEMENTS = "Rymnet HRMS/Rymnet HRMS.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Choo U Tan (HK7P8G6PM4)";
+				DEVELOPMENT_TEAM = 5JR4F25XUY;
 				INFOPLIST_FILE = "Rymnet HRMS/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.aviru.Rymnet-HRMS";
+				PRODUCT_BUNDLE_IDENTIFIER = com.RymnetSolutions.RymnetHRMS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "a40c1fd0-ceaf-4ec4-ae17-a72c54b1fe98";
-				PROVISIONING_PROFILE_SPECIFIER = wildCard_dev_prov;
+				PROVISIONING_PROFILE = "507d9170-e288-4b6e-8280-e0fdf281bcbd";
+				PROVISIONING_PROFILE_SPECIFIER = RymnetHRMS_Dev_Prov;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -511,14 +525,16 @@
 			baseConfigurationReference = C883D80B646417012D609B48 /* Pods-Rymnet HRMS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = TVX637QK9Z;
+				CODE_SIGN_ENTITLEMENTS = "Rymnet HRMS/Rymnet HRMS.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Choo U Tan (HK7P8G6PM4)";
+				DEVELOPMENT_TEAM = 5JR4F25XUY;
 				INFOPLIST_FILE = "Rymnet HRMS/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.aviru.Rymnet-HRMS";
+				PRODUCT_BUNDLE_IDENTIFIER = com.RymnetSolutions.RymnetHRMS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "a40c1fd0-ceaf-4ec4-ae17-a72c54b1fe98";
-				PROVISIONING_PROFILE_SPECIFIER = wildCard_dev_prov;
+				PROVISIONING_PROFILE = "507d9170-e288-4b6e-8280-e0fdf281bcbd";
+				PROVISIONING_PROFILE_SPECIFIER = RymnetHRMS_Dev_Prov;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

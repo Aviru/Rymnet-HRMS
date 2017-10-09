@@ -17,7 +17,11 @@ class HRMSViewVC: BaseVC,UIWebViewDelegate {
 
         // Do any additional setup after loading the view.
         
-        webView.loadRequest(URLRequest(url: URL(string: loginInfoModelObj.strRedirectUrl!)!))
+        let strURL = "\(loginInfoModelObj.strRedirectUrl!)\(loginInfoModelObj.strAuthToken!)"
+        
+        print("RymnetHRMS URL:\(strURL)")
+        
+        webView.loadRequest(URLRequest(url: URL(string: strURL)!))
     }
 
     override func didReceiveMemoryWarning() {

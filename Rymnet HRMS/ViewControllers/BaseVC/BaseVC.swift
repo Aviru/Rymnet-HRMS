@@ -37,6 +37,8 @@ class BaseVC: UIViewController {
         addLoadingIndicator()
     }
     
+   
+    
     func addLoadingIndicator () {
         self.view.addSubview(activityIndicator)
         activityIndicator.center = self.view.center

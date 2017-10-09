@@ -78,8 +78,8 @@ class WebServiceController {
                 
                 print("Login Dictionary: \(dictLogin)")
                 
-                let objUser = ModelLogin.init(infoDic: dictLogin)
-                let data = NSKeyedArchiver.archivedData(withRootObject: objUser)
+                loginInfoModelObj = ModelLogin.init(infoDic: dictLogin)
+                let data = NSKeyedArchiver.archivedData(withRootObject: loginInfoModelObj)
                 
                 
                 if GlobalUserDefaults.saveObject(obj: data as AnyObject, key: "loginInfo"){
