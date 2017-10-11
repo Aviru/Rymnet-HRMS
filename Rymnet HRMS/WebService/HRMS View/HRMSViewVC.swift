@@ -17,7 +17,7 @@ class HRMSViewVC: BaseVC,UIWebViewDelegate {
 
         // Do any additional setup after loading the view.
         
-        let strURL = "\(loginInfoModelObj.strRedirectUrl!)\(loginInfoModelObj.strAuthToken!)"
+        let strURL = "\(loginInfoModelObj.strRedirectUrl!)\("auth?auth=")\(loginInfoModelObj.strAuthToken!)"
         
         print("RymnetHRMS URL:\(strURL)")
         
